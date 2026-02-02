@@ -1,3 +1,4 @@
+"use client";
 import { projects } from '@/data'
 import React from 'react'
 import { motion } from 'framer-motion'
@@ -19,11 +20,11 @@ const RecentProjects = () => {
           A small selection of <span className='text-purple'>recent projects</span>
         </h1>
       </motion.div>
-      
+
       <div className='flex flex-wrap items-center justify-center p-4 gap-8 mt-10 lg:w-[80vw]'>
-        {projects.map(({id, title, des, iconLists, link, liveLink}, index) => (
-          <motion.div 
-            key={id} 
+        {projects.map(({ id, title, des, iconLists, link, liveLink }, index) => (
+          <motion.div
+            key={id}
             {...motionProps("fadeIn", index)}
             className='sm:h-[20rem] lg:h-[30rem] h-[25rem] lg:min-h-[20rem] flex items-center justify-center sm:w-[570px]'
           >
